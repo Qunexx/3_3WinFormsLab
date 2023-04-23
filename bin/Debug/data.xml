@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfSampleRow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SampleRow>
+    <Hidden />
+    <Name>Товар 1</Name>
+    <Price>100</Price>
+    <Count>1</Count>
+  </SampleRow>
+  <SampleRow>
+    <Hidden />
+    <Name>Товар 2</Name>
+    <Price>200</Price>
+    <Count>2</Count>
+  </SampleRow>
+  <SampleRow>
+    <Hidden />
+    <Name>Товар 3</Name>
+    <Price>300</Price>
+    <Count>3</Count>
+  </SampleRow>
+  <SampleRow>
+    <Hidden />
+    <Name>Товар 11</Name>
+    <Price>1001</Price>
+    <Count>1</Count>
+  </SampleRow>
+</ArrayOfSampleRow>
