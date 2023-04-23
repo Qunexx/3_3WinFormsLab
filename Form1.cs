@@ -221,10 +221,10 @@ namespace MyClass
             rowscount = dataGridView1.RowCount; //максимальное кол-во строк
            
 
-            int[] a;
-            a = new int[rowscount];
+            List<int> a;
+            a = new List<int>();
 
-            for (int i = 0; i < rowscount; i++) //поиск прироста каждого города в таблице
+            for (int i = 0; i < rowscount-1; i++) //поиск прироста каждого города в таблице
             {
                 var value = dataGridView1[1, i].Value;
                 
@@ -237,31 +237,23 @@ namespace MyClass
                     prirost = nacelenie / timeofentity;
                     MessageBox.Show(prirost.ToString());
                     
-                    a.Append(prirost).ToArray();
+                    a.Add(prirost);
                     
-                
             }
-
-
-            int b = Convert.ToInt32(a.Max());
             
-            int tmpMax = int.MinValue;          //поиск максимального значения в массиве
-           
-            for (int i = 0; i < a.Length; i++)
-            {
-                if (tmpMax < a[i])
-                {
-                    tmpMax = a[i];
-                }
-            }
-
+            int b =a.Max();
             MessageBox.Show(b + "- максимальный прирост");
-           /* maxprirost_ind=Indexof(a, tmpMax);
-
-            MessageBox.Show(maxprirost_ind.ToString());
-           */
-
-
+            foreach(DataGridViewRow row in dataGridView1.Rows)
+            {
+                
+               int f = Convert.ToInt32(row.Cells[2].Value);
+                int c =2023- Convert.ToInt32(row.Cells[1].Value);
+                if(f==0 || c==0)
+                    continue;
+                 if((f/c)==b)
+                 row.Selected = true;
+             }
+ 
 
 
             int Indexof(int[] array, int value) //ф-я нахождения индекса нужного нам значения
